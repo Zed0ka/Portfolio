@@ -1,0 +1,45 @@
+nav {
+  background-color: #038C7F;
+  color: white;
+}
+
+div {
+  background-color: #038C7F;
+}
+div p {
+  color: white;
+}
+
+.btn-primary {
+  background-color: #D94169;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-weight: bold !important;
+  font-size: 3em !important;
+}
+.btn-primary:hover {
+  background-color: #04D99D;
+  color: black;
+}
+
+.card {
+  border: 0.25rem solid black;
+  padding: 1rem;
+  margin: 4rem;
+}
+
+.nb1 {
+  border-color: #b7259f !important;
+}
+
+.nb2 {
+  border-color: #d737bd !important;
+}
+
+.nb3 {
+  border-color: #e062cb !important;
+}
+
+.nb4 {
+  border-color: #e88cd9 !important;
+}/*# sourceMappingURL=portfolio.css.map */

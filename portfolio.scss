@@ -1,0 +1,63 @@
+$bg1: #8c1c7a;
+$bg2: #038C7F;
+$bg3: #D94169;
+$bg4: #04D99D;
+
+$padding:1rem;
+$margin:2rem;
+
+@function xPadding($nb) {
+    @return calc($nb*$padding); //renvoie la valeur du padding fixé multiplié par le nombre entre parenthèses
+}
+
+@function xMargin($nb) {
+    @return calc($nb*$margin); //renvoie la valeur du padding fixé multiplié par le nombre entre parenthèses
+}
+
+@function textVisi($info) {              // L'idée est de faire une fonction qui ajuste la couleur du texte en fonction de la couleur du fond.
+    @if ($info == $bg1 or $info == $bg2) {
+        @return white;
+    } @else {
+        @return black;
+    }
+}
+
+nav {
+    background-color: $bg2;
+    color: textVisi($bg2);
+}
+
+div {
+    background-color: $bg2;
+    p {
+        color: textVisi($bg2);
+    }
+}
+
+.btn-primary {
+    background-color: $bg3;
+    color: textVisi($bg3);
+    font: {
+        family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        weight:bold !important;
+        size: 3em !important;
+    }
+    &:hover {
+        background-color: $bg4;
+        color: textVisi($bg4);
+    }
+}
+
+$borderWeird: 0.25rem solid black;
+
+.card {
+    border: $borderWeird;
+    padding: xPadding(1);
+    margin: xMargin(2);
+}
+
+@for $i from 1 through 4 {
+    .nb#{$i} {
+        border-color: lighten($bg1,$i*10) !important;
+    }
+}
